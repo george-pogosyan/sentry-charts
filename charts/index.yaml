@@ -3,7 +3,7 @@ entries:
   clickhouse:
   - apiVersion: v1
     appVersion: "19.14"
-    created: "2023-10-30T11:10:19.943362089Z"
+    created: "2023-10-30T11:13:32.082763131Z"
     description: ClickHouse is an open source column-oriented database management
       system capable of real time generation of analytical data reports using SQL
       queries
@@ -25,7 +25,53 @@ entries:
   sentry:
   - apiVersion: v2
     appVersion: 23.10.1
-    created: "2023-10-30T11:10:20.186077605Z"
+    created: "2023-10-30T11:13:32.400531723Z"
+    dependencies:
+    - condition: sourcemaps.enabled
+      name: memcached
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 6.5.2
+    - condition: redis.enabled
+      name: redis
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 17.11.3
+    - condition: kafka.enabled
+      name: kafka
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 22.1.3
+    - condition: clickhouse.enabled
+      name: clickhouse
+      repository: https://george-pogosyan.github.io/sentry-charts
+      version: 3.5.0
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: https://raw.githubusercontent.com/bitnami/charts/pre-2022/bitnami
+      version: 9.0.0
+    - alias: rabbitmq
+      condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 11.15.3
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 12.5.1
+    - condition: nginx.enabled
+      name: nginx
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 14.2.2
+    description: A Helm chart for Kubernetes
+    digest: 8382d8632fe9c00c7e224b60620bb2a978da4f9548ce222e65a65d8cd9e3484b
+    maintainers:
+    - name: sentry-kubernetes
+    name: sentry
+    type: application
+    urls:
+    - https://george-pogosyan.github.io/sentry-charts/sentry-20.8.6.tgz
+    version: 20.8.6
+  - apiVersion: v2
+    appVersion: 23.10.1
+    created: "2023-10-30T11:13:32.3482592Z"
     dependencies:
     - condition: sourcemaps.enabled
       name: memcached
@@ -71,7 +117,7 @@ entries:
     version: 20.8.5
   - apiVersion: v2
     appVersion: 23.10.1
-    created: "2023-10-30T11:10:20.138435163Z"
+    created: "2023-10-30T11:13:32.295576472Z"
     dependencies:
     - condition: sourcemaps.enabled
       name: memcached
@@ -117,7 +163,7 @@ entries:
     version: 20.8.4
   - apiVersion: v2
     appVersion: 23.10.1
-    created: "2023-10-30T11:10:20.09023092Z"
+    created: "2023-10-30T11:13:32.243585654Z"
     dependencies:
     - condition: sourcemaps.enabled
       name: memcached
@@ -163,7 +209,7 @@ entries:
     version: 20.8.3
   - apiVersion: v2
     appVersion: 23.10.1
-    created: "2023-10-30T11:10:20.042684277Z"
+    created: "2023-10-30T11:13:32.190648522Z"
     dependencies:
     - condition: sourcemaps.enabled
       name: memcached
@@ -209,7 +255,7 @@ entries:
     version: 20.8.2
   - apiVersion: v2
     appVersion: 23.10.1
-    created: "2023-10-30T11:10:19.994561434Z"
+    created: "2023-10-30T11:13:32.137108382Z"
     dependencies:
     - condition: sourcemaps.enabled
       name: memcached
@@ -256,7 +302,7 @@ entries:
   sentry-kubernetes:
   - apiVersion: v2
     appVersion: latest
-    created: "2023-10-30T11:10:20.186507506Z"
+    created: "2023-10-30T11:13:32.40107143Z"
     description: A Helm chart for sentry-kubernetes (https://github.com/getsentry/sentry-kubernetes)
     digest: 57760fc8ad6d26a6cf3d28b78bfb2bdb8d80f4cce2ff1d4e527c2b2f3d1437c9
     home: https://github.com/getsentry/sentry-kubernetes
@@ -272,4 +318,4 @@ entries:
     urls:
     - https://george-pogosyan.github.io/sentry-charts/sentry-kubernetes-0.3.2.tgz
     version: 0.3.2
-generated: "2023-10-30T11:10:19.941527187Z"
+generated: "2023-10-30T11:13:32.080701802Z"
