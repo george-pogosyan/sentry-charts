@@ -31,6 +31,14 @@ data:
           value: {{ (include "sentry.kafka.bootstrap_servers_string" .) | quote }}
         - name: "message.max.bytes"
           value: 50000000  # 50MB or bust
+        - name: security.protocol
+          value: SASL_PLAINTEXT
+        - name: sasl.mechanism
+          value: SCRAM-SHA-512
+        - name: sasl.username
+          value: sentry
+        - name: sasl.password
+          value: "sentry123"
 
       {{- if $redisPass }}
       redis: "redis://:{{ $redisPass }}@{{ $redisHost }}:{{ $redisPort }}"
