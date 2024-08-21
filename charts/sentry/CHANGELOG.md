@@ -1,5 +1,24 @@
 # Changelog
 
+## [25.0.0](https://github.com/george-pogosyan/sentry-charts/compare/sentry-v24.0.0...sentry-v25.0.0) (2024-08-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* deployment default values ([#1379](https://github.com/george-pogosyan/sentry-charts/issues/1379))
+
+### Features
+
+* add optional relabeling configs to serviceMonitor object ([#1390](https://github.com/george-pogosyan/sentry-charts/issues/1390)) ([4f6e440](https://github.com/george-pogosyan/sentry-charts/commit/4f6e440c5c69ab728a2e9ac9a56b55ce274c5dc1))
+* add parameters for web workers TTL ([#1355](https://github.com/george-pogosyan/sentry-charts/issues/1355)) ([a1b218f](https://github.com/george-pogosyan/sentry-charts/commit/a1b218f69a8ea20a987e11a94dbf052d5a05d3a8))
+
+
+### Bug Fixes
+
+* deployment default values ([#1379](https://github.com/george-pogosyan/sentry-charts/issues/1379)) ([72376fd](https://github.com/george-pogosyan/sentry-charts/commit/72376fd0aeb9d7fdb6b30a275ae59429bb88da12))
+* remove 'profiling-global-suspect-functions' as it is not supported on self hosted ([#1358](https://github.com/george-pogosyan/sentry-charts/issues/1358)) ([25004f6](https://github.com/george-pogosyan/sentry-charts/commit/25004f67e4cba551bb78d5c42af80d2e631c50de))
+* update memcached chart to 7.4.8 ([#1352](https://github.com/george-pogosyan/sentry-charts/issues/1352)) ([a39ae5b](https://github.com/george-pogosyan/sentry-charts/commit/a39ae5b5252b0535f76ee1dbaccf723dbc1bd6fb))
+
 ## [24.0.0](https://github.com/sentry-kubernetes/charts/compare/sentry-v23.12.1...sentry-v24.0.0) (2024-08-19)
 
 
